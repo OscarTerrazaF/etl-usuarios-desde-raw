@@ -39,3 +39,7 @@ SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
    git add README.md
    git commit -m "README final con estructura, imagen y SQL"
    git push origin master
+
+## 📸 Vista previa | Preview
+
+![captura](screenshots/vista_usuarios_limpios.png)
