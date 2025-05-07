@@ -51,5 +51,6 @@ git commit -m "README final funcional con vista previa"
 git push origin master
 ## Vista previa de los datos limpios
 
-![Vista de usuarios limpios](screenshots/vista_usuarios_limpios.png)
+![Vista de usuarios limpios](https://raw.githubusercontent.com/OscarTerrazaF/etl-usuarios-desde-raw/master/screenshots/vista_usuarios_limpios.png)
+
 
