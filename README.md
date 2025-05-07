@@ -1,45 +1,55 @@
 # 🛢️ Proyecto ETL desde Base de Datos Cruda | Raw Database ETL Project
-Este proyecto implementa un pipeline ETL completo en Python. Parte desde una base de datos SQLite sucia (`usuarios_raw.db`), realiza la limpieza y normalización de los datos con `pandas`, y finalmente carga los datos limpios en una nueva base (`usuarios.db`), lista para análisis o consumo por parte de analistas de datos.
 
-This project implements a complete ETL pipeline in Python. It starts from a raw SQLite database (`usuarios_raw.db`), cleans and normalizes the data using `pandas`, and finally loads the cleaned records into a new SQLite database (`usuarios.db`) ready for analysis or consumption by data teams.
+Este proyecto implementa un pipeline ETL en Python que parte desde una base de datos SQLite sucia (`usuarios_raw.db`), limpia los datos usando pandas y los carga en una base limpia (`usuarios.db`) lista para análisis.
+
+This project implements a Python-based ETL pipeline starting from a raw SQLite database (`usuarios_raw.db`), cleans it using pandas, and loads the cleaned data into `usuarios.db` for analysis.
+
+---
 
 ## 🔧 Tecnologías utilizadas | Technologies used
+
 - Python 3  
 - pandas  
 - sqlite3  
 - SQLAlchemy  
-- DB Browser for SQLite (visualization)
+- DB Browser for SQLite
+
+---
 
 ## 🧪 ¿Qué hace este pipeline? | What does this pipeline do?
-✔️ Extrae datos desde una base de datos cruda (`usuarios_raw.db`)  
-✔️ Limpia nombres, valida emails, normaliza fechas  
-✔️ Convierte campos booleanos como “sí”, “NO”, “false” a 1 o 0  
-✔️ Elimina registros con emails inválidos y fechas vacías  
-✔️ Carga los datos limpios en la base `usuarios.db` en una tabla `usuarios_limpios`
 
-✔️ Extracts records from a raw database (`usuarios_raw.db`)  
-✔️ Cleans names, validates emails, normalizes date formats  
-✔️ Converts dirty boolean values like “sí”, “NO”, “false” into 1 or 0  
-✔️ Drops records with invalid emails and empty dates  
-✔️ Loads cleaned data into `usuarios.db` inside a table named `usuarios_limpios`
+✔️ Limpia nombres (espacios, minúsculas)  
+✔️ Valida emails  
+✔️ Normaliza fechas  
+✔️ Convierte campos como “sí”, “NO”, “false” a 1 o 0  
+✔️ Elimina registros con emails o fechas inválidas  
+✔️ Carga los datos en una nueva tabla `usuarios_limpios`
 
-## 📂 Archivos del proyecto | Project structure
+---
+
+## 📂 Estructura del proyecto | Project structure
+
+
+---
 
 ## ▶️ Cómo ejecutar | How to run
+
 ```bash
 python etl_usuarios_desde_raw.py
 SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
 
 ---
 
-📌 Una vez que lo pegues y guardes:
+## 🚀 ¿Y después de pegarlo?
 
-1. Terminal:
-   ```bash
-   git add README.md
-   git commit -m "README final con estructura, imagen y SQL"
-   git push origin master
+1. **Guardá el archivo**
+2. En tu terminal de Visual Studio Code:
 
-## 📸 Vista previa | Preview
+```bash
+git add README.md
+git commit -m "README final funcional con vista previa"
+git push origin master
+## Vista previa de los datos limpios
 
-![captura](screenshots/vista_usuarios_limpios.png)
+![Vista de usuarios limpios](screenshots/vista_usuarios_limpios.png)
+
