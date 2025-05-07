@@ -1,34 +1,53 @@
-# ETL: Usuarios desde datos raw
+# 🛢️ Proyecto ETL desde Base de Datos Cruda | Raw Database ETL Project
 
-Este proyecto realiza un proceso ETL (Extract, Transform, Load) para limpiar y estructurar datos de usuarios obtenidos desde un archivo `raw`.
+Este proyecto implementa un pipeline ETL en Python que parte desde una base de datos SQLite sucia (`usuarios_raw.db`), limpia los datos usando pandas y los carga en una base limpia (`usuarios.db`) lista para análisis.
 
-## 📌 Objetivo
+This project implements a Python-based ETL pipeline starting from a raw SQLite database (`usuarios_raw.db`), cleans it using pandas, and loads the cleaned data into `usuarios.db` for analysis.
 
-Transformar datos sucios en una tabla limpia y estructurada lista para análisis y carga en una base de datos.
+---
 
-## 🔍 Tecnologías usadas
+## 🔧 Tecnologías utilizadas | Technologies used
 
-- Python 3
-- Pandas
-- Visualización con matplotlib (si aplica)
+- Python 3  
+- pandas  
+- sqlite3  
+- SQLAlchemy  
+- DB Browser for SQLite
 
-## 🧪 Ejecución del script
+---
 
-```bash
-python main.py
+## 🧪 ¿Qué hace este pipeline? | What does this pipeline do?
+
+✔️ Limpia nombres (espacios, minúsculas)  
+✔️ Valida emails  
+✔️ Normaliza fechas  
+✔️ Convierte campos como “sí”, “NO”, “false” a 1 o 0  
+✔️ Elimina registros con emails o fechas inválidas  
+✔️ Carga los datos en una nueva tabla `usuarios_limpios`
+
+---
+
+## 📂 Estructura del proyecto | Project structure
+
 etl-usuarios-desde-raw/
-├── data/
-│   └── usuarios_raw.csv
+├── etl_usuarios_desde_raw.py
+├── usuarios_raw.db
+├── usuarios.db
 ├── screenshots/
-│   └── vista_usuarios_limpios.png
-├── main.py
+│ └── vista_usuarios_limpios.png
 └── README.md
 
 ---
 
-Esto va a mostrar tu imagen correctamente en el `README.md`, usando el link **raw** que ya confirmaste que funciona.
+## ▶️ Cómo ejecutar | How to run
 
-¿Querés que lo prepare en un archivo y te lo paso listo para subir?
-## Vista previa de los datos limpios
+```bash
+python etl_usuarios_desde_raw.py
 
-![Vista de usuarios limpios](https://raw.githubusercontent.com/OscarTerrazaF/etl-usuarios-desde-raw/master/screenshots/vista_usuarios_limpios.png)
+📊 Consulta de ejemplo | Example query
+SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
+
+✍️ Autor | Author
+Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
+
+This project was created by Oscar Terraza Figueroa as part of his practical training in data engineering.
