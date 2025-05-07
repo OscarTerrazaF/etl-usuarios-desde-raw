@@ -1,57 +1,34 @@
-# 🛢️ Proyecto ETL desde Base de Datos Cruda | Raw Database ETL Project
+# ETL: Usuarios desde datos raw
 
-Este proyecto implementa un pipeline ETL en Python que parte desde una base de datos SQLite sucia (`usuarios_raw.db`), limpia los datos usando pandas y los carga en una base limpia (`usuarios.db`) lista para análisis.
+Este proyecto realiza un proceso ETL (Extract, Transform, Load) para limpiar y estructurar datos de usuarios obtenidos desde un archivo `raw`.
 
-This project implements a Python-based ETL pipeline starting from a raw SQLite database (`usuarios_raw.db`), cleans it using pandas, and loads the cleaned data into `usuarios.db` for analysis.
+## 📌 Objetivo
 
----
+Transformar datos sucios en una tabla limpia y estructurada lista para análisis y carga en una base de datos.
 
-## 🔧 Tecnologías utilizadas | Technologies used
+## 🔍 Tecnologías usadas
 
-- Python 3  
-- pandas  
-- sqlite3  
-- SQLAlchemy  
-- DB Browser for SQLite
+- Python 3
+- Pandas
+- Visualización con matplotlib (si aplica)
 
----
-
-## 🧪 ¿Qué hace este pipeline? | What does this pipeline do?
-
-✔️ Limpia nombres (espacios, minúsculas)  
-✔️ Valida emails  
-✔️ Normaliza fechas  
-✔️ Convierte campos como “sí”, “NO”, “false” a 1 o 0  
-✔️ Elimina registros con emails o fechas inválidas  
-✔️ Carga los datos en una nueva tabla `usuarios_limpios`
-
----
-
-## 📂 Estructura del proyecto | Project structure
-
-
----
-
-## ▶️ Cómo ejecutar | How to run
+## 🧪 Ejecución del script
 
 ```bash
-python etl_usuarios_desde_raw.py
-SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
+python main.py
+etl-usuarios-desde-raw/
+├── data/
+│   └── usuarios_raw.csv
+├── screenshots/
+│   └── vista_usuarios_limpios.png
+├── main.py
+└── README.md
 
 ---
 
-## 🚀 ¿Y después de pegarlo?
+Esto va a mostrar tu imagen correctamente en el `README.md`, usando el link **raw** que ya confirmaste que funciona.
 
-1. **Guardá el archivo**
-2. En tu terminal de Visual Studio Code:
-
-```bash
-git add README.md
-git commit -m "README final funcional con vista previa"
-git push origin master
+¿Querés que lo prepare en un archivo y te lo paso listo para subir?
 ## Vista previa de los datos limpios
 
-![Vista de usuarios limpios](screenshots/vista_usuarios_limpios.png)
-
-
-
+![Vista de usuarios limpios](https://raw.githubusercontent.com/OscarTerrazaF/etl-usuarios-desde-raw/master/screenshots/vista_usuarios_limpios.png)
