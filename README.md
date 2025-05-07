@@ -45,7 +45,7 @@ etl-usuarios-desde-raw/
 python etl_usuarios_desde_raw.py
 
 📊 Consulta de ejemplo | Example query
-SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
+SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;```
 
 ✍️ Autor | Author
 Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
