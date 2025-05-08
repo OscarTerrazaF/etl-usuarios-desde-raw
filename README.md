@@ -36,27 +36,26 @@ etl-usuarios-desde-raw/
 ├── screenshots/
 │ └── vista_usuarios_limpios.png
 └── README.md
+---
+
+## ▶️ Cómo ejecutar | How to run
+
+Usá este comando:
+
+    python etl_usuarios_desde_raw.py
 
 ---
 
-    ## ▶️ Cómo ejecutar | How to run
+## 📊 Consulta de ejemplo | Example query
 
-    Usá este comando:
+Podés usar esta consulta en la base de datos:
 
-        python etl_usuarios_desde_raw.py
+    SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
 
-    ---
+---
 
-    ## 📊 Consulta de ejemplo | Example query
+## ✍️ Autor | Author
 
-    Podés usar esta consulta en la base de datos:
+Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
 
-        SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
-
-    ---
-
-    ## ✍️ Autor | Author
-
-    Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
-
-    This project was created by Oscar Terraza Figueroa as part of his practical training in data engineering.
+This project was created by Oscar Terraza Figueroa as part of his practical training in data engineering.
