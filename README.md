@@ -39,15 +39,24 @@ etl-usuarios-desde-raw/
 
 ---
 
-## ▶️ Cómo ejecutar | How to run
+    ## ▶️ Cómo ejecutar | How to run
 
-```bash
-python etl_usuarios_desde_raw.py
+    Usá este comando:
 
-📊 Consulta de ejemplo | Example query
-SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;```
+        python etl_usuarios_desde_raw.py
 
-✍️ Autor | Author
-Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
+    ---
 
-This project was created by Oscar Terraza Figueroa as part of his practical training in data engineering.
+    ## 📊 Consulta de ejemplo | Example query
+
+    Podés usar esta consulta en la base de datos:
+
+        SELECT COUNT(*) FROM usuarios_limpios WHERE activo = 1;
+
+    ---
+
+    ## ✍️ Autor | Author
+
+    Este proyecto fue creado por Oscar Terraza Figueroa como parte de su formación práctica en ingeniería de datos.
+
+    This project was created by Oscar Terraza Figueroa as part of his practical training in data engineering.
